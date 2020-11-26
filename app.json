@@ -5,8 +5,12 @@
   "keywords": ["rails", "heroku", "add-on"],
   "env": {
     "JOB_BACKEND": {
-      "description": "Choose how you process background jobs (sidekiq/resque/delayed-job/que).",
+      "description": "Choose how you process background jobs (sidekiq/resque/delayed_job/que).",
       "value": "sidekiq"
+    },
+    "BUNDLE_WITHOUT": {
+      "description": "This is used by the Ruby buildpack. Remove your chosen job backend to ensure it is installed.",
+      "value": "development:test:sidekiq:resque:delayed_job:que"
     },
     "WEB_CONCURRENCY": {
       "description": "The number of Puma processes (concurrent requests) per dyno.",
