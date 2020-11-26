@@ -2,5 +2,15 @@
   "name": "Rails Autoscale Demo",
   "description": "A barebones Rails app, built for exploring the Rails Autoscale Heroku add-on",
   "logo": "https://res.cloudinary.com/adamlogic/image/upload/v1573326217/Brand/logo-square-transparent-png.png",
-  "keywords": ["rails", "heroku", "add-on"]
+  "keywords": ["rails", "heroku", "add-on"],
+  "env": {
+    "WEB_CONCURRENCY": {
+      "description": "The number of Puma processes (concurrent requests) per dyno.",
+      "value": "1"
+    },
+    "RAILS_MAX_THREADS": {
+      "description": "The number of Puma threads and Sidekiq concurrency.",
+      "value": "1"
+    }
+  }
 }
