@@ -11,6 +11,28 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails_autoscale_agent'
 
+case ENV['JOB_BACKEND']
+when 'sidekiq'
+  gem 'sidekiq'
+when 'resque'
+  gem 'resque'
+when 'delayed-job'
+  gem 'delayed_job_active_record'
+  gem 'delayed-web'
+when 'que'
+  gem 'que', github: 'que-rb/que', branch: 'master'
+  gem 'que-web'
+else
+  # JOB_BACKEND is unspecified or unsupported. We'll declare all possible gems,
+  # but don't require them. This way a local `bundle install` installs everything.
+  gem 'sidekiq', require: false
+  gem 'resque', require: false
+  gem 'delayed_job_active_record', require: false
+  gem 'delayed-web', require: false
+  gem 'que', github: 'que-rb/que', branch: 'master', require: false
+  gem 'que-web', require: false
+end
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
