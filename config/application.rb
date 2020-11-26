@@ -17,7 +17,7 @@ require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+Bundler.require(ENV.fetch('JOB_BACKEND', 'sidekiq').underscore.to_sym, *Rails.groups)
 
 module RailsAutoscaleDemo
   class Application < Rails::Application
