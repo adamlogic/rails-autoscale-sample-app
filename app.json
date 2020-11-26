@@ -13,5 +13,5 @@
       "value": "1"
     }
   },
-  "addons": ["rails-autoscale", "logentries", "librato", "redis-cloud"]
+  "addons": ["rails-autoscale", "logentries", "librato", "rediscloud"]
 }
