@@ -15,3 +15,4 @@ require("turbolinks").start()
 // const imagePath = (name) => images(name, true)
 
 import "controllers"
+require("css/application.scss")
