@@ -6,7 +6,7 @@ class Job
   def initialize(*attributes)
     # Default values
     @queue = 'default'
-    @latency = '100'
+    @latency = '1000'
 
     super
   end
