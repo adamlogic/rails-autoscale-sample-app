@@ -9,6 +9,6 @@ class JobsController < ApplicationController
     @job = Job.new(params.require(:job).permit!)
     @job.save!
 
-    head :ok
+    render layout: false
   end
 end
