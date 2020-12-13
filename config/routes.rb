@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   if defined?(Delayed)
-    mount Delayed::Web::Engine, at: '/workers'
+    match "/workers" => DelayedJobWeb, :anchor => false, :via => [:get, :post]
   end
 
   if defined?(Sidekiq)

@@ -12,7 +12,8 @@ case $JOB_BACKEND in
     ;;
 
   delayed_job)
-    echo "Delayed Job not yet supported..."
+    echo "Starting Delayed Job..."
+    QUEUES=urgent,default rake jobs:work
     ;;
 
   que)

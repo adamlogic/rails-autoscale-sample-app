@@ -40,7 +40,7 @@ group :resque do
 end
 group :delayed_job do
   gem 'delayed_job_active_record'
-  gem 'delayed-web'
+  gem 'delayed_job_web'
 end
 group :que do
   gem 'que', github: 'que-rb/que', branch: 'master'

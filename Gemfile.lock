@@ -82,13 +82,16 @@ GEM
     concurrent-ruby (1.1.7)
     connection_pool (2.2.3)
     crass (1.0.6)
-    delayed-web (0.4.7)
-      rails (>= 3.2.13)
     delayed_job (4.1.8)
       activesupport (>= 3.0, < 6.1)
     delayed_job_active_record (4.1.4)
       activerecord (>= 3.0, < 6.1)
       delayed_job (>= 3.0, < 5)
+    delayed_job_web (1.4.3)
+      activerecord (> 3.0.0)
+      delayed_job (> 2.0.3)
+      rack-protection (>= 1.5.5)
+      sinatra (>= 1.4.4)
     erubi (1.10.0)
     ffi (1.13.1)
     globalid (0.4.2)
@@ -235,8 +238,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  delayed-web
   delayed_job_active_record
+  delayed_job_web
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
