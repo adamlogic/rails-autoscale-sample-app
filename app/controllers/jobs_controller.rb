@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action { @nav_current = 'Worker load' }
+  before_action { @nav_current = :jobs }
 
   def new
     @job = Job.new

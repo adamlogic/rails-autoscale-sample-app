@@ -1,14 +1,14 @@
 <% link_class = "group rounded-md px-3 py-2 flex items-center text-sm font-medium " %>
-<% link_class << (label == @nav_current ? "text-indigo-700 hover:text-indigo-700 bg-gray-50 hover:bg-white" : "text-gray-900 hover:text-gray-900 hover:bg-gray-50") %>
+<% link_class << (id == @nav_current ? "text-indigo-700 hover:text-indigo-700 bg-gray-50 hover:bg-white" : "text-gray-900 hover:text-gray-900 hover:bg-gray-50") %>
 
 <% svg_class = "flex-shrink-0 -ml-1 mr-3 h-6 w-6 " %>
-<% svg_class << (label == @nav_current ? "text-indigo-500 group-hover:text-indigo-500" : "text-gray-400 group-hover:text-gray-500") %>
+<% svg_class << (id == @nav_current ? "text-indigo-500 group-hover:text-indigo-500" : "text-gray-400 group-hover:text-gray-500") %>
 
 <a href="<%= href %>" class="<%= link_class %>" <%= 'target="_blank"' if local_assigns[:new_window] %>>
   <svg class="<%= svg_class %>" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
     <%= yield %>
   </svg>
   <span class="truncate">
-    <%= label %>
+    <%= t("nav.#{id}") %>
   </span>
 </a>
