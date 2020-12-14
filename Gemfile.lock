@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/adamlogic/rails_autoscale_agent.git
-  revision: dc4fa09f1ec3b020c49055914a8175a3584eccd9
+  revision: 9c373abfea15dd4b18255207dca993328fac4e47
   branch: busy-jobs
   specs:
     rails_autoscale_agent (0.10.0.beta.1)
