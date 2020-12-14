@@ -9,7 +9,7 @@ gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'rails_autoscale_agent'
+gem 'rails_autoscale_agent', github: 'adamlogic/rails_autoscale_agent', branch: 'busy-jobs'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
