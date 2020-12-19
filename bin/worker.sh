@@ -4,7 +4,7 @@ case $JOB_BACKEND in
 
   sidekiq)
     echo "Starting Sidekiq..."
-    bundle exec sidekiq -c 1 -q urgent -q default
+    bundle exec sidekiq -q urgent -q default
     ;;
 
   resque)
