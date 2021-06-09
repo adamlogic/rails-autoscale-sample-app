@@ -9,8 +9,8 @@
       "value": "sidekiq"
     },
     "BUNDLE_WITHOUT": {
-      "description": "This is used by the Ruby buildpack. Remove your chosen job backend to ensure it is installed.",
-      "value": "development:test:sidekiq:resque:delayed_job:que"
+      "description": "This is used by the Ruby buildpack to avoid installing unwanted job backends. By default we're only installing Sidekiq.",
+      "value": "development:test:resque:delayed_job:que"
     },
     "WEB_CONCURRENCY": {
       "description": "The number of Puma processes (concurrent requests) per dyno.",
