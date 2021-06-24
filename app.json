@@ -13,11 +13,15 @@
       "value": "development:test:resque:delayed_job:que"
     },
     "WEB_CONCURRENCY": {
-      "description": "The number of Puma processes (concurrent requests) per dyno.",
+      "description": "Controls the number of Puma processes (concurrent requests) per dyno.",
       "value": "1"
     },
     "RAILS_MAX_THREADS": {
-      "description": "The number of Puma threads and Sidekiq concurrency.",
+      "description": "Controls Puma threads and web database pool.",
+      "value": "1"
+    },
+    "WORKER_CONCURRENCY": {
+      "description": "Controls worker threads and worker database pool.",
       "value": "1"
     }
   },
