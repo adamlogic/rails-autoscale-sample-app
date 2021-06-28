@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/adamlogic/rails_autoscale_agent.git
+  revision: a74b008068904d18d97277c8fb08dac9f7b274cf
+  branch: empty-reports
+  specs:
+    rails_autoscale_agent (0.10.2)
+
+GIT
   remote: https://github.com/que-rb/que.git
   revision: 61e1805deb8161e5c1502e518a9a44fa464d308c
   branch: master
@@ -155,7 +162,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
-    rails_autoscale_agent (0.10.2)
     railties (6.0.4)
       actionpack (= 6.0.4)
       activesupport (= 6.0.4)
@@ -246,7 +252,7 @@ DEPENDENCIES
   que!
   que-web
   rails (~> 6.0.3, >= 6.0.3.2)
-  rails_autoscale_agent
+  rails_autoscale_agent!
   resque
   selenium-webdriver
   sidekiq
