@@ -18,11 +18,11 @@
     },
     "RAILS_MAX_THREADS": {
       "description": "Controls Puma threads and web database pool.",
-      "value": "1"
+      "value": "3"
     },
-    "WORKER_CONCURRENCY": {
-      "description": "Controls worker threads and worker database pool.",
-      "value": "1"
+    "WORKER_THREADS": {
+      "description": "Controls worker threads (Sidekiq only) and worker database pool.",
+      "value": "5"
     }
   },
   "addons": ["rails-autoscale", "logentries", "librato", "heroku-redis"]
