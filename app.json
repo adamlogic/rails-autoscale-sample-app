@@ -5,7 +5,7 @@
   "keywords": ["rails", "heroku", "add-on"],
   "buildpacks": [
     {
-      "url": "heroku/heroku-buildpack-multi-procfile"
+      "url": "https://github.com/heroku/heroku-buildpack-multi-procfile"
     },
     {
       "url": "heroku/ruby"
