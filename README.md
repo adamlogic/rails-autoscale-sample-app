@@ -8,17 +8,9 @@ To get started right away with the default setup, click the button below.
 
 The default setup includes Sidekiq for job processing and Rails Autoscale pre-installed. If you prefer a different job processing library, use one of the alternate deploy buttons below.
 
-<!-- or if you want to deploy without Rails Autoscale (good for testing the installation flow), -->
-
-<!-- | Jobs Library | With Rails Autoscale                                                                                                                 | Without Rails Autoscale                                                             |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
-| Sidekiq      | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)                                                  | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) |
-| Delayed Job  | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)                                                  | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) |
-| Resque       | [Deploy with Resque](https://heroku.com/deploy?env[JOB_BACKEND]=resque&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:que) | -->
-
-- [Deploy with Resque](https://heroku.com/deploy?env[JOB_BACKEND]=resque&env[BUNDLE_WITHOUT]=development:test:sidekiq:resque:que)
 - [Deploy with DelayedJob](https://heroku.com/deploy?env[JOB_BACKEND]=delayed_job&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:que)
-- [Deploy with Que](https://heroku.com/deploy?env[JOB_BACKEND]=que&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:resque)
+<!-- - [Deploy with Resque](https://heroku.com/deploy?env[JOB_BACKEND]=resque&env[BUNDLE_WITHOUT]=development:test:sidekiq:resque:que)
+- [Deploy with Que](https://heroku.com/deploy?env[JOB_BACKEND]=que&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:resque) -->
 
 ## Use cases
 
@@ -29,7 +21,7 @@ The default setup includes Sidekiq for job processing and Rails Autoscale pre-in
 
 ## Making changes to your instance
 
-If you want to make code changes to your own instance of this app, [create a new repo from the template](https://github.com/adamlogic/rails-autoscale-sample-app/generate) first. Then you can use the deploy button from your own repo.
+If you want to make code changes to your own instance of this app, [create a new repo from the template](https://github.com/adamlogic/rails-autoscale-sample-app/generate) first. As long as the repo is public, you can then use the deploy button from your own repo.
 
 <!-- After you’ve deployed, you can set up automatic deploys from your own repo like this:
 
