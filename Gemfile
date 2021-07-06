@@ -31,7 +31,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Require gems based on JOB_BACKEND
+# Require gems based on the chosen job backend
 group :sidekiq do
   gem 'sidekiq'
 end

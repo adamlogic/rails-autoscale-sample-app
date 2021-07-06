@@ -8,9 +8,7 @@ To get started right away with the default setup, click the button below.
 
 The default setup includes Sidekiq for job processing and Rails Autoscale pre-installed. If you prefer a different job processing library, use one of the alternate deploy buttons below.
 
-- [Deploy with DelayedJob](https://heroku.com/deploy?env[JOB_BACKEND]=delayed_job&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:que)
-<!-- - [Deploy with Resque](https://heroku.com/deploy?env[JOB_BACKEND]=resque&env[BUNDLE_WITHOUT]=development:test:sidekiq:resque:que)
-- [Deploy with Que](https://heroku.com/deploy?env[JOB_BACKEND]=que&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:resque) -->
+- [Deploy with DelayedJob](https://heroku.com/deploy?env[PROCFILE]=Procfile.delayed_job&env[BUNDLE_WITHOUT]=development:test:sidekiq:delayed_job:que)
 
 ## Use cases
 

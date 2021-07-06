@@ -15,16 +15,18 @@ require "action_view/railtie"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
+JOBS_BACKEND = (ENV.fetch('PROCFILE').split('.').last || 'sidekiq').to_sym
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(ENV.fetch('JOB_BACKEND', 'sidekiq').to_sym, *Rails.groups)
+Bundler.require(JOBS_BACKEND, *Rails.groups)
 
 module RailsAutoscaleDemo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    config.active_job.queue_adapter = ENV.fetch('JOB_BACKEND', 'sidekiq').to_sym
+    config.active_job.queue_adapter = JOBS_BACKEND
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

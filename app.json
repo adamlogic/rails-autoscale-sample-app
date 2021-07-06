@@ -3,10 +3,18 @@
   "description": "A barebones Rails app, built for exploring the Rails Autoscale Heroku add-on",
   "logo": "https://res.cloudinary.com/adamlogic/image/upload/v1573326217/Brand/logo-square-transparent-png.png",
   "keywords": ["rails", "heroku", "add-on"],
+  "buildpacks": [
+    {
+      "url": "heroku/heroku-buildpack-multi-procfile"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "env": {
-    "JOB_BACKEND": {
-      "description": "Choose how you process background jobs (sidekiq/resque/delayed_job/que).",
-      "value": "sidekiq"
+    "PROCFILE": {
+      "description": "The specified Procfile determines the job backend.",
+      "value": "Procfile"
     },
     "BUNDLE_WITHOUT": {
       "description": "This is used by the Ruby buildpack to avoid installing unwanted job backends. By default we're only installing Sidekiq.",
