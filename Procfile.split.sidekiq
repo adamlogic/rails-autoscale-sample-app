@@ -1,0 +1,12 @@
+release: bundle exec rails db:migrate
+
+web: bundle exec rails server
+
+# This Procfile splits the worker queues into separate dynos, allowing them
+# to be independently configured and autoscaled.
+
+# WORKER_THREADS is a required environment variable.
+# WORKER_URGENT_THREADS is optional. If undefined, WORKER_THREADS will be used.
+
+worker: RAILS_MAX_THREADS=${WORKER_THREADS} bundle exec sidekiq -q default
+worker-urgent: RAILS_MAX_THREADS=${WORKER_URGENT_THREADS:-${WORKER_THREADS}} bundle exec sidekiq -q urgent

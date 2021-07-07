@@ -10,6 +10,10 @@ The default setup includes Sidekiq for job processing and Rails Autoscale pre-in
 
 - [Deploy with DelayedJob](https://heroku.com/deploy?env[PROCFILE]=Procfile.delayed_job&env[BUNDLE_WITHOUT]=development:test:sidekiq:resque:que)
 
+You can also deploy with Sidekiq queues split into separate, dedicated dynos for independent configuration and autoscaling. See `Procfile.split.sidekiq` for the implementation.
+
+- [Deploy with queue-specific worker dynos](https://heroku.com/deploy?env[PROCFILE]=Procfile.split.sidekiq)
+
 ## Use cases
 
 - You’ve never used Rails Autoscale and want to play with it.
