@@ -32,8 +32,8 @@
 en:
   nav:
     home: Home
-    reqs: Web requests
-    jobs: Job Generator
-    worker: Jobs Dashboard
+    reqs: Requests
+    jobs: Jobs
+    worker: Job Monitor
     rails_autoscale: Rails Autoscale
     heroku: Heroku
