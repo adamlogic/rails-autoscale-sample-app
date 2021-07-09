@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   resources :jobs
   resources :reqs
 
-  root to: redirect('jobs/new')
+  root to: redirect('reqs/new')
 end
