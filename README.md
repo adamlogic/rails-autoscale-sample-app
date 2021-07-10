@@ -35,10 +35,9 @@ If you only want to make _configuration changes_ to your own instance, you can d
 
 After you deploy the app and open it, you’ll see a home screen with a summary of how to use it and a sidebar with the following links:
 
-<!-- - **Request Generator** – Use this tool to generate web traffic and trigger web autoscaling. -->
-
-- **Job Generator** – Use this tool to generate background jobs and trigger worker autoscaling.
-- **Jobs Dashboard** – Open the web UI for whichever job processing library is installed.
+- **Requests** – Use this tool to generate web traffic and trigger web autoscaling.
+- **Jobs** – Use this tool to generate background jobs and trigger worker autoscaling.
+- **Job Dashboard** – Open the web UI specific to the job processing library.
 - **Heroku** – Launch the Heroku dashboard for the app.
 <!-- - **Rails Autoscale** – Launch the Rails Autoscale dashboard for the app. -->
 
