@@ -3,8 +3,8 @@
     <div class="shadow sm:rounded-md sm:overflow-hidden">
       <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
         <div>
-          <h3 class="text-lg leading-6 font-medium text-gray-900">Generate web requests</h3>
-          <p class="mt-1 text-sm text-gray-500">Submit requests with configurable processing time to trigger capacity issues.</p>
+          <h3 class="text-lg leading-6 font-medium text-gray-900">Requests</h3>
+          <p class="mt-1 text-sm text-gray-500">Submit web requests with configurable processing time to test capacity issues.</p>
         </div>
 
         <!--
@@ -28,7 +28,7 @@
 
         <fieldset>
           <legend class="text-base font-medium text-gray-900">Processing time</legend>
-          <p class="text-sm text-gray-500">Simulates "work" by sleeping for the specified duration.</p>
+          <p class="text-sm text-gray-500">The request will sleep for the specified duration.</p>
           <div class="mt-4 space-y-2">
             <% latency_opts = { 100 => '100 ms', 1000 => '1 sec', 10000 => '10 sec', 20000 => '20 sec', 30000 => '30 sec', 60000 => '1 min' } %>
             <% latency_opts.each do |value, label| %>

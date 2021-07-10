@@ -3,8 +3,8 @@
     <div class="shadow sm:rounded-md sm:overflow-hidden">
       <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
         <div>
-          <h3 class="text-lg leading-6 font-medium text-gray-900">Simulate worker load</h3>
-          <p class="mt-1 text-sm text-gray-500">Enqueue background jobs with a configurable processing time to simulate real-world usage and trigger autoscaling.</p>
+          <h3 class="text-lg leading-6 font-medium text-gray-900">Jobs</h3>
+          <p class="mt-1 text-sm text-gray-500">Enqueue background jobs with a configurable processing time to test capacity issues.</p>
         </div>
 
         <!--
@@ -27,14 +27,14 @@
         -->
 
         <fieldset>
-          <legend class="text-base font-medium text-gray-900">Queue</legend>
-          <p class="text-sm text-gray-500">Rails Autoscale requires named queues.</p>
+          <legend class="text-base font-medium text-gray-900">Processing time</legend>
+          <p class="text-sm text-gray-500">The job will sleep for the specified duration.</p>
           <div class="mt-4 space-y-2">
-            <% queue_opts = { default: 'Default', urgent: 'Urgent' } %>
-            <% queue_opts.each do |value, label| %>
+            <% latency_opts = { 100 => '100 ms', 1000 => '1 sec', 10000 => '10 sec', 20000 => '20 sec', 30000 => '30 sec', 60000 => '1 min' } %>
+            <% latency_opts.each do |value, label| %>
               <div class="flex items-center">
-                <%= form.radio_button :queue, value, class: 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300' %>
-                <%= form.label :queue, value: value, class: 'ml-3' do %>
+                <%= form.radio_button :latency, value, class: 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300' %>
+                <%= form.label :latency, value: value, class: 'ml-3' do %>
                   <span class="block text-sm font-medium text-gray-700"><%= label %></span>
                 <% end %>
               </div>
@@ -43,14 +43,13 @@
         </fieldset>
 
         <fieldset>
-          <legend class="text-base font-medium text-gray-900">Processing time</legend>
-          <p class="text-sm text-gray-500">Simulates "work" by sleeping for the specified duration.</p>
+          <legend class="text-base font-medium text-gray-900">Queue</legend>
           <div class="mt-4 space-y-2">
-            <% latency_opts = { 100 => '100 ms', 1000 => '1 sec', 10000 => '10 sec', 20000 => '20 sec', 30000 => '30 sec', 60000 => '1 min' } %>
-            <% latency_opts.each do |value, label| %>
+            <% queue_opts = { default: 'Default', urgent: 'Urgent' } %>
+            <% queue_opts.each do |value, label| %>
               <div class="flex items-center">
-                <%= form.radio_button :latency, value, class: 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300' %>
-                <%= form.label :latency, value: value, class: 'ml-3' do %>
+                <%= form.radio_button :queue, value, class: 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300' %>
+                <%= form.label :queue, value: value, class: 'ml-3' do %>
                   <span class="block text-sm font-medium text-gray-700"><%= label %></span>
                 <% end %>
               </div>
