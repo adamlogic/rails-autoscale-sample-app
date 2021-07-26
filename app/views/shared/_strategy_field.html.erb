@@ -1,0 +1,10 @@
+<legend class="text-base font-medium text-gray-900">Processing strategy</legend>
+<%= yield %>
+<div class="mt-4 space-y-2">
+  <% strategy_opts.each do |value, label| %>
+  <label class="flex items-center">
+    <%= form.styled_radio_button :strategy, value %>
+    <span class="block ml-3 text-sm font-medium text-gray-700"><%= label %></span>
+  </label>
+  <% end %>
+</div>

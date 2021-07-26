@@ -1,0 +1,9 @@
+<legend class="text-base font-medium text-gray-900">Queue</legend>
+<div class="mt-4 space-y-2">
+  <% queue_opts.each do |value, label| %>
+  <label class="flex items-center">
+    <%= form.styled_radio_button :queue, value %>
+    <span class="block ml-3 text-sm font-medium text-gray-700"><%= label %></span>
+  </label>
+  <% end %>
+</div>

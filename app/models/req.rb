@@ -1,16 +1,17 @@
 class Req
   include ActiveModel::Model
 
-  attr_accessor :latency
+  attr_accessor :latency, :strategy
 
   def initialize(*attributes)
     # Default values
     @latency = '1000'
+    @strategy = Pause::SLEEP
 
     super
   end
 
   def save!
-    sleep latency.to_f / 1000
+    Pause.pause_for milliseconds: latency.to_f, strategy: strategy
   end
 end
