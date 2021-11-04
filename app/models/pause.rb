@@ -1,5 +1,5 @@
 class Pause
-  STRATEGIES = [SLEEP = 'sleep', SPLIT = 'split', CPU = 'cpu']
+  STRATEGIES = [SLEEP = "sleep", SPLIT = "split", CPU = "cpu"]
 
   def self.pause_for(milliseconds:, strategy:, randomize: false)
     milliseconds *= rand if randomize

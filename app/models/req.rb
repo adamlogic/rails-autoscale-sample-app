@@ -5,7 +5,7 @@ class Req
 
   def initialize(*attributes)
     # Default values
-    @latency = '1000'
+    @latency = "1000"
     @strategy = Pause::SLEEP
     @randomize = false
 
@@ -16,7 +16,7 @@ class Req
     Pause.pause_for(
       milliseconds: latency.to_f,
       strategy: strategy,
-      randomize: randomize.to_s == 'true',
+      randomize: randomize.to_s == "true"
     )
   end
 end

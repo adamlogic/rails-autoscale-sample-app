@@ -5,8 +5,8 @@ class Job
 
   def initialize(*attributes)
     # Default values
-    @queue = 'default'
-    @latency = '1000'
+    @queue = "default"
+    @latency = "1000"
     @strategy = Pause::SLEEP
 
     super

@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  if defined?(Delayed)
-    match "/workers" => DelayedJobWeb, :anchor => false, :via => [:get, :post]
-  end
+  match "/workers" => DelayedJobWeb, :anchor => false, :via => %i[get post] if defined?(Delayed)
 
   if defined?(Sidekiq)
-    require 'sidekiq/web'
-    mount Sidekiq::Web => '/workers'
+    require "sidekiq/web"
+    mount Sidekiq::Web => "/workers"
   end
 
   if defined?(Resque)
-    require 'resque/server'
-    mount Resque::Server.new, :at => '/workers'
+    require "resque/server"
+    mount Resque::Server.new, at: "/workers"
   end
 
   if defined?(Que)
@@ -22,5 +20,5 @@ Rails.application.routes.draw do
   resources :reqs
   get "req", to: "reqs#create"
 
-  root to: redirect('reqs/new')
+  root to: redirect("reqs/new")
 end

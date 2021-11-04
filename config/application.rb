@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -15,7 +15,7 @@ require "action_view/railtie"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
-JOBS_BACKEND = (ENV['PROCFILE'].to_s.split('.')[1] || 'sidekiq').to_sym
+JOBS_BACKEND = (ENV["PROCFILE"].to_s.split(".")[1] || "sidekiq").to_sym
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
