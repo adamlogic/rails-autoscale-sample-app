@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :jobs
   resources :reqs
+  get "req", to: "reqs#create"
 
   root to: redirect('reqs/new')
 end

@@ -1,7 +1,9 @@
 class Pause
   STRATEGIES = [SLEEP = 'sleep', SPLIT = 'split', CPU = 'cpu']
 
-  def self.pause_for(milliseconds:, strategy:)
+  def self.pause_for(milliseconds:, strategy:, randomize: false)
+    milliseconds *= rand if randomize
+
     case strategy
     when SPLIT
       pause_with_all milliseconds
