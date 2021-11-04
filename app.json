@@ -33,5 +33,5 @@
       "value": "5"
     }
   },
-  "addons": ["rails-autoscale", "logentries", "librato", "heroku-redis"]
+  "addons": ["rails-autoscale", "logentries", "librato", "heroku-redis", "loadmill"]
 }
