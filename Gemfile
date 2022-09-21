@@ -9,7 +9,11 @@ gem "puma", "~> 4.1"
 gem "webpacker", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "bootsnap", ">= 1.4.2", require: false
-gem "rails_autoscale_agent"
+gem "rails-autoscale-web"
+gem "rails-autoscale-sidekiq"
+gem "rails-autoscale-resque"
+gem "rails-autoscale-delayed_job"
+gem "rails-autoscale-que"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -45,5 +49,5 @@ group :delayed_job do
 end
 group :que do
   gem "que", github: "que-rb/que", branch: "master"
-  gem "que-web"
+  # gem "que-web"
 end

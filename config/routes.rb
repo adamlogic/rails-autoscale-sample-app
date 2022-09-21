@@ -11,10 +11,10 @@ Rails.application.routes.draw do
     mount Resque::Server.new, at: "/workers"
   end
 
-  if defined?(Que)
-    require "que/web"
-    mount Que::Web => "/workers"
-  end
+  # if defined?(Que)
+  #   require "que/web"
+  #   mount Que::Web => "/workers"
+  # end
 
   resources :jobs
   resources :reqs

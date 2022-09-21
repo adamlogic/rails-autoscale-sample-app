@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/que-rb/que.git
-  revision: 61e1805deb8161e5c1502e518a9a44fa464d308c
+  revision: b138b29410e72c230d8001bc33a382ba06358045
   branch: master
   specs:
-    que (1.0.0.beta4)
+    que (2.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -128,9 +128,6 @@ GEM
     public_suffix (4.0.6)
     puma (4.3.8)
       nio4r (~> 2.0)
-    que-web (0.9.3)
-      que (~> 1.0.0.beta3)
-      sinatra
     racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -154,12 +151,27 @@ GEM
       bundler (>= 1.3.0)
       railties (= 6.0.4)
       sprockets-rails (>= 2.0.0)
+    rails-autoscale-core (1.0.1)
+    rails-autoscale-delayed_job (1.0.1)
+      delayed_job_active_record (>= 4.0)
+      rails-autoscale-core
+    rails-autoscale-que (1.0.1)
+      que (>= 1.0)
+      rails-autoscale-core
+    rails-autoscale-resque (1.0.1)
+      rails-autoscale-core
+      resque (>= 2.0)
+    rails-autoscale-sidekiq (1.0.1)
+      rails-autoscale-core
+      sidekiq (>= 5.0)
+    rails-autoscale-web (1.0.1)
+      rails-autoscale-core
+      railties
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
-    rails_autoscale_agent (0.10.2)
     railties (6.0.4)
       actionpack (= 6.0.4)
       activesupport (= 6.0.4)
@@ -273,9 +285,12 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   que!
-  que-web
   rails (~> 6.0.3, >= 6.0.3.2)
-  rails_autoscale_agent
+  rails-autoscale-delayed_job
+  rails-autoscale-que
+  rails-autoscale-resque
+  rails-autoscale-sidekiq
+  rails-autoscale-web
   resque
   selenium-webdriver
   sidekiq
