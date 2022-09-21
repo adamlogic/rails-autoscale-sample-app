@@ -1,0 +1,25 @@
+services:
+  - name: ra-sample
+    type: web
+    env: ruby
+    buildCommand: bin/render-build.sh
+    startCommand: bundle exec rails server
+    envVars:
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ra-sample-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: ra-sample-redis
+          property: connectionString
+  - name: ra-sample-redis
+    type: redis
+    ipAllowList: [] # only allow connections from services in this Render account
+
+databases:
+  - name: ra-sample-db
+    ipAllowList: [] # only allow connections from services in this Render account
