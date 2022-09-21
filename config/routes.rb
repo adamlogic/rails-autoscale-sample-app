@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  match "/workers" => DelayedJobWeb, :anchor => false, :via => %i[get post] if defined?(Delayed)
+  if defined?(DelayedJobWeb)
+    match "/workers" => DelayedJobWeb, :anchor => false, :via => %i[get post] if defined?(Delayed)
+  end
 
   if defined?(Sidekiq)
     require "sidekiq/web"
