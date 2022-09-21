@@ -12,4 +12,8 @@ class ReqsController < ApplicationController
     # render layout: false
     head :ok
   end
+
+  def headers
+    render plain: request.headers.map { |(k,v)| [k, v.to_s[0..20]] }.sort.map { |(k,v)| "#{k}=#{v}" }.join("\n")
+  end
 end

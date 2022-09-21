@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :jobs
   resources :reqs
   get "req", to: "reqs#create"
+  get "headers", to: "reqs#headers"
 
   root to: redirect("reqs/new")
 end
