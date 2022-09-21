@@ -1,3 +1,31 @@
+GIT
+  remote: https://github.com/rails-autoscale/rails-autoscale-gems
+  revision: 6e413cb6c779fc2afa5d2a8b9c0353eeb84d00ad
+  branch: request-start-nanoseconds
+  glob: rails-autoscale-sidekiq/*.gemspec
+  specs:
+    rails-autoscale-sidekiq (1.0.1)
+      rails-autoscale-core
+      sidekiq (>= 5.0)
+
+GIT
+  remote: https://github.com/rails-autoscale/rails-autoscale-gems
+  revision: 6e413cb6c779fc2afa5d2a8b9c0353eeb84d00ad
+  branch: request-start-nanoseconds
+  glob: rails-autoscale-web/*.gemspec
+  specs:
+    rails-autoscale-web (1.0.1)
+      rails-autoscale-core
+      railties
+
+GIT
+  remote: https://github.com/rails-autoscale/rails-autoscale-gems
+  revision: 6e413cb6c779fc2afa5d2a8b9c0353eeb84d00ad
+  branch: request-start-nanoseconds
+  glob: rails-autoscale-core/*.gemspec
+  specs:
+    rails-autoscale-core (1.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,13 +156,6 @@ GEM
       bundler (>= 1.3.0)
       railties (= 6.0.4)
       sprockets-rails (>= 2.0.0)
-    rails-autoscale-core (1.0.1)
-    rails-autoscale-sidekiq (1.0.1)
-      rails-autoscale-core
-      sidekiq (>= 5.0)
-    rails-autoscale-web (1.0.1)
-      rails-autoscale-core
-      railties
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -234,8 +255,9 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
-  rails-autoscale-sidekiq
-  rails-autoscale-web
+  rails-autoscale-core!
+  rails-autoscale-sidekiq!
+  rails-autoscale-web!
   selenium-webdriver
   sidekiq
   spring
