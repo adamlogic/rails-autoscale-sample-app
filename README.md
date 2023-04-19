@@ -1,35 +1,26 @@
-# Rails Autoscale Sample App
+# Judoscale Sample App
 
-This is a small Rails app that you can deploy to Heroku in a single click. It provides tools for generating web traffic and background jobs so you can test capacity issues and trigger autoscaling when using the [Rails Autoscale Heroku add-on].
+This is a small Rails app that you can deploy to Heroku in a single click. It provides tools for generating web traffic and background jobs so you can test capacity issues and trigger autoscaling when using the [Judoscale Heroku add-on](https://elements.heroku.com/judoscale).
 
 To get started right away with the default setup, click the button below.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-The default setup includes Sidekiq for job processing and Rails Autoscale pre-installed. If you prefer a different job processing library, use one of the alternate deploy buttons below.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/judoscale/rails-autoscale-sample-app/render-deloy)
 
-- [Deploy with DelayedJob](https://heroku.com/deploy?env[PROCFILE]=Procfile.delayed_job&env[BUNDLE_WITHOUT]=development:test:sidekiq:resque:que)
-
-You can also deploy with Sidekiq queues split into separate, dedicated dynos for independent configuration and autoscaling. See `Procfile.split.sidekiq` for the implementation.
-
-- [Deploy with queue-specific worker dynos](https://heroku.com/deploy?env[PROCFILE]=Procfile.split.sidekiq)
+The app includes Sidekiq for job processing and Judoscale pre-installed.
 
 ## Use cases
 
-- You’ve never used Rails Autoscale and want to play with it.
-- You already use Rails Autoscale and want to experiment with different configurations.
-- You don’t care at all about Rails Autoscale but just need a simple Rails app on Heroku for whatever reason.
-- You built Rails Autoscale and need an easy way to test it with each of the supported job processing libraries.
+- You’ve never used Judoscale and want to play with it.
+- You already use Judoscale and want to experiment with different configurations.
+- You don’t care at all about Judoscale but just need a simple Rails app on Heroku or Render for whatever reason.
 
-## Making changes to your instance
+## Making changes to your deployment
 
-If you want to make code changes to your own instance of this app, [create a new repo from the template](https://github.com/adamlogic/rails-autoscale-sample-app/generate) first. As long as the repo is public, you can then use the deploy button from your own repo.
+If you want to make code changes to your own deployment of this app, [create a new repo from the template](https://github.com/adamlogic/rails-autoscale-sample-app/generate) first. As long as the repo is public, you can then use the deploy button from your own repo.
 
-<!-- After you’ve deployed, you can set up automatic deploys from your own repo like this:
-
-![automatic deploys from forked demo repo] -->
-
-If you only want to make _configuration changes_ to your own instance, you can do that using the deploy buttons here (without creating your own repo).
+If you only want to make _configuration changes_ to your deployment, you can do that using the deploy buttons here (without creating your own repo).
 
 ## How to use the app
 
@@ -39,7 +30,7 @@ After you deploy the app and open it, you’ll see a home screen with a summary 
 - **Jobs** – Use this tool to generate background jobs and trigger worker autoscaling.
 - **Job Dashboard** – Open the web UI specific to the job processing library.
 - **Heroku** – Launch the Heroku dashboard for the app.
-<!-- - **Rails Autoscale** – Launch the Rails Autoscale dashboard for the app. -->
+<!-- - **Judoscale** – Launch the Judoscale dashboard for the app. -->
 
 <!-- ## Request Generator
 
