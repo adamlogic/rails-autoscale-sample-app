@@ -22,7 +22,7 @@ services:
     env: ruby
     plan: starter
     buildCommand: bundle install
-    startCommand: "RAILS_MAX_THREADS=${WORKER_THREADS:-${RAILS_MAX_THREADS}} bundle exec sidekiq -q urgent -q default"
+    startCommand: "RAILS_MAX_THREADS=${WORKER_THREADS:-3} bundle exec sidekiq -q urgent -q default"
     envVars:
       - key: REDIS_URL
         fromService:
