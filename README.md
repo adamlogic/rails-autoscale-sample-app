@@ -6,7 +6,7 @@ To get started right away with the default setup, click the button below.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/judoscale/rails-autoscale-sample-app/render-deloy)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/judoscale/rails-autoscale-sample-app/tree/render-deloy)
 
 The app includes Sidekiq for job processing and Judoscale pre-installed.
 
