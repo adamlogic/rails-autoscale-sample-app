@@ -1,3 +1,31 @@
+GIT
+  remote: https://github.com/judoscale/judoscale-ruby.git
+  revision: d64624379a3e297f18e9b4602c317b15c6d347bb
+  branch: add-render-platform-support
+  glob: judoscale-sidekiq/*.gemspec
+  specs:
+    judoscale-sidekiq (1.3.0)
+      judoscale-ruby (= 1.3.0)
+      sidekiq (>= 5.0)
+
+GIT
+  remote: https://github.com/judoscale/judoscale-ruby.git
+  revision: d64624379a3e297f18e9b4602c317b15c6d347bb
+  branch: add-render-platform-support
+  glob: judoscale-rails/*.gemspec
+  specs:
+    judoscale-rails (1.3.0)
+      judoscale-ruby (= 1.3.0)
+      railties
+
+GIT
+  remote: https://github.com/judoscale/judoscale-ruby.git
+  revision: d64624379a3e297f18e9b4602c317b15c6d347bb
+  branch: add-render-platform-support
+  glob: judoscale-ruby/*.gemspec
+  specs:
+    judoscale-ruby (1.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -82,13 +110,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    judoscale-rails (1.3.1)
-      judoscale-ruby (= 1.3.1)
-      railties
-    judoscale-ruby (1.3.1)
-    judoscale-sidekiq (1.3.1)
-      judoscale-ruby (= 1.3.1)
-      sidekiq (>= 5.0)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -230,8 +251,9 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  judoscale-rails
-  judoscale-sidekiq
+  judoscale-rails!
+  judoscale-ruby!
+  judoscale-sidekiq!
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)

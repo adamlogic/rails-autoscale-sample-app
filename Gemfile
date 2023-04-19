@@ -10,8 +10,9 @@ gem "webpacker", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "sidekiq"
-gem "judoscale-rails"
-gem "judoscale-sidekiq"
+gem "judoscale-ruby", github: "judoscale/judoscale-ruby", branch: "add-render-platform-support", glob: "judoscale-ruby/*.gemspec"
+gem "judoscale-rails", github: "judoscale/judoscale-ruby", branch: "add-render-platform-support", glob: "judoscale-rails/*.gemspec"
+gem "judoscale-sidekiq", github: "judoscale/judoscale-ruby", branch: "add-render-platform-support", glob: "judoscale-sidekiq/*.gemspec"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
