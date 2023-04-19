@@ -9,7 +9,9 @@ gem "puma", "~> 4.1"
 gem "webpacker", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "bootsnap", ">= 1.4.2", require: false
-gem "rails_autoscale_agent"
+gem "sidekiq"
+gem "judoscale-rails"
+gem "judoscale-sidekiq"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -31,19 +33,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# Require gems based on the chosen job backend
-group :sidekiq do
-  gem "sidekiq"
-end
-group :resque do
-  gem "resque"
-end
-group :delayed_job do
-  gem "delayed_job_active_record"
-  gem "delayed_job_web"
-end
-group :que do
-  gem "que", github: "que-rb/que", branch: "master"
-  gem "que-web"
-end

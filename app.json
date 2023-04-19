@@ -12,14 +12,6 @@
     }
   ],
   "env": {
-    "PROCFILE": {
-      "description": "The specified Procfile determines the job backend.",
-      "value": "Procfile"
-    },
-    "BUNDLE_WITHOUT": {
-      "description": "This is used by the Ruby buildpack to avoid installing unwanted job backends. By default we're only installing Sidekiq.",
-      "value": "development:test:resque:delayed_job:que"
-    },
     "WEB_CONCURRENCY": {
       "description": "Controls the number of Puma processes (concurrent requests) per dyno.",
       "value": "1"
@@ -29,9 +21,9 @@
       "value": "3"
     },
     "WORKER_THREADS": {
-      "description": "Controls worker threads (Sidekiq only) and worker database pool.",
+      "description": "Controls Sidekiq concurrency and worker database pool.",
       "value": "5"
     }
   },
-  "addons": ["rails-autoscale", "logentries", "librato", "heroku-redis", "loadmill"]
+  "addons": ["judoscale", "librato", "heroku-redis"]
 }

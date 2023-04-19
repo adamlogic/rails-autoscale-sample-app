@@ -1,0 +1,39 @@
+services:
+  - name: judo-demo-web
+    type: web
+    env: ruby
+    buildCommand: bin/render-build.sh
+    startCommand: bundle exec rails server
+    envVars:
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: judo-demo-postgres
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: judo-demo-redis
+          property: connectionString
+
+  - name: judo-demo-worker
+    type: worker
+    env: ruby
+    plan: starter
+    buildCommand: bundle install
+    startCommand: "RAILS_MAX_THREADS=${WORKER_THREADS:-3} bundle exec sidekiq -q urgent -q default"
+    envVars:
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: judo-demo-redis
+          property: connectionString
+
+  - name: judo-demo-redis
+    type: redis
+    ipAllowList: [] # only allow connections from services in this Render account
+
+databases:
+  - name: judo-demo-postgres
+    ipAllowList: [] # only allow connections from services in this Render account
