@@ -1,30 +1,30 @@
 GIT
   remote: https://github.com/judoscale/judoscale-ruby.git
-  revision: d64624379a3e297f18e9b4602c317b15c6d347bb
-  branch: add-render-platform-support
+  revision: 81f283eef5251974641341fcd3160c10c7955a05
+  branch: main
   glob: judoscale-sidekiq/*.gemspec
   specs:
-    judoscale-sidekiq (1.3.0)
-      judoscale-ruby (= 1.3.0)
+    judoscale-sidekiq (1.3.1)
+      judoscale-ruby (= 1.3.1)
       sidekiq (>= 5.0)
 
 GIT
   remote: https://github.com/judoscale/judoscale-ruby.git
-  revision: d64624379a3e297f18e9b4602c317b15c6d347bb
-  branch: add-render-platform-support
+  revision: 81f283eef5251974641341fcd3160c10c7955a05
+  branch: main
   glob: judoscale-rails/*.gemspec
   specs:
-    judoscale-rails (1.3.0)
-      judoscale-ruby (= 1.3.0)
+    judoscale-rails (1.3.1)
+      judoscale-ruby (= 1.3.1)
       railties
 
 GIT
   remote: https://github.com/judoscale/judoscale-ruby.git
-  revision: d64624379a3e297f18e9b4602c317b15c6d347bb
-  branch: add-render-platform-support
+  revision: 81f283eef5251974641341fcd3160c10c7955a05
+  branch: main
   glob: judoscale-ruby/*.gemspec
   specs:
-    judoscale-ruby (1.3.0)
+    judoscale-ruby (1.3.1)
 
 GEM
   remote: https://rubygems.org/
