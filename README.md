@@ -1,6 +1,6 @@
 # Judoscale Sample App
 
-This is a small Rails app that you can deploy to Heroku in a single click. It provides tools for generating web traffic and background jobs so you can test capacity issues and trigger autoscaling when using the [Judoscale Heroku add-on](https://elements.heroku.com/judoscale).
+This is a small Rails app that you can deploy to Heroku in a single click. It provides tools for generating web traffic and background jobs so you can test capacity issues and trigger autoscaling when using the [Judoscale Heroku add-on](https://elements.heroku.com/addons/judoscale).
 
 To get started right away with the default setup, click the button below.
 
@@ -18,7 +18,7 @@ The app includes Sidekiq for job processing and Judoscale pre-installed.
 
 ## Making changes to your deployment
 
-If you want to make code changes to your own deployment of this app, [create a new repo from the template](https://github.com/adamlogic/rails-autoscale-sample-app/generate) first. As long as the repo is public, you can then use the deploy button from your own repo.
+If you want to make code changes to your own deployment of this app, [create a new repo from the template](https://github.com/judoscale/judoscale-sample-app/generate) first. As long as the repo is public, you can then use the deploy button from your own repo.
 
 If you only want to make _configuration changes_ to your deployment, you can do that using the deploy buttons here (without creating your own repo).
 
